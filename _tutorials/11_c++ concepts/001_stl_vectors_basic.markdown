@@ -243,7 +243,7 @@ c++ has a number of < algorithm > functions that work with vectors and iterators
 *sort* works similarly to *remove_if* in that it can take in a vector and a boolean function that determines how the elements are sorted. The boolean function has two parameter that are elements of the type of vector, and returns true or false based on a comparison of the two.
 ~~~~{.cpp}
     // compare for a vector of floats, sorting from lowest to highest
-    bool my_compare( float a, float b){
+    static bool my_compare( float a, float b){
         return a < b;
     }
 ~~~~
@@ -258,7 +258,7 @@ The vector range and boolean function can then be passed to *sort*:
 ~~~~
 *ofSort* with objects:
 ~~~~{.cpp}
-    bool my_compare( Particle &a, Particle &b){
+    static bool my_compare( Particle &a, Particle &b){
         return a.pos.x < b.pos.x;
     }
     
